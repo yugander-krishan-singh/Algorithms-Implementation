@@ -1,4 +1,4 @@
-```
+
 public class ModifiedBinarySearch {
 
 	public static int binarySearch(int[] arr, int val) {
@@ -35,4 +35,4 @@ public class ModifiedBinarySearch {
 
 	}
 }
-```
+
