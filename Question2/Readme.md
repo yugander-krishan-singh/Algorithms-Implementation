@@ -1,7 +1,7 @@
 Problem Statement: Find all even length binary sequences with same sum of first and second half bits
 
 Examples:
-
+```
 Input:  N = 2
 Output: 
 0101 1111 1001 0110 0000 1010 
@@ -12,3 +12,4 @@ Output:
 110011 101101 100001 110101 001010 011110 
 010010 001100 000000 010100 101110 100010 
 110110 100100 
+```
