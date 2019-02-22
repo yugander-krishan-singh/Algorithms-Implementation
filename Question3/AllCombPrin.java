@@ -19,8 +19,7 @@ public class AllCombPrinImp {
 				String rem = digits.substring(j);
 				
 				print(sum+prev, Double.parseDouble(current), rem, target, expression+"+"+current);
-				print(sum, prev*Double.parseDouble(current), rem, target, expression+"*"+current);
-				//print(sum+prev, Double.parseDouble(nextDig), rem, target, expression+"+"+nextDig);
+				print(sum, prev*Double.parseDouble(current), rem, target, expression+"*"+current);				
 				print(sum+prev, -Double.parseDouble(current), rem, target, expression+"-"+current);
 			}
 		}
