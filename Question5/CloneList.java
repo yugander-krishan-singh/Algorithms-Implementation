@@ -111,11 +111,7 @@ public class CloneList {
 			temp = temp.next;
 		}
 	}
-
-	public static void cloneList(CloneList list) {
-
-	}
-
+	
 	public static void main(String[] args) {
 		CloneList cl = new CloneList();
 		cl.add(1);
@@ -132,7 +128,7 @@ public class CloneList {
 		modifyOrginalList(cl, newList);
 		createRandomPointersInClonedList(cl,map);
 		fixOriginalList(cl, map);
-		System.out.println(newList);
+		
 	}
 
 }
