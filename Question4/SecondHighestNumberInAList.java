@@ -25,7 +25,7 @@ public class SecondHighestNumberInAList {
 				s = currentListEle;
 			}			
 		}
-		out.println(s);
+		out.println(f+","+s);
 	}
 	
 	public static void main(String[] args) {
