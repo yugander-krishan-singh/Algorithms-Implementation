@@ -1,7 +1,7 @@
 Problem Statement: Get the euilibrium index of an array
 
 HINT: Equilibrium index for an array is defined as:
-      Let's say if index x is equilibrium index then
+      Let's say if index **x** is equilibrium index then
       
       
       
