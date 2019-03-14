@@ -7,3 +7,8 @@
 
 
 Source: [GeeksForGeeks](https://www.geeksforgeeks.org/amazon-interview-experience-set-281-for-sde1/)
+
+
+
+
+### Every day you have to revise and read HLD, LLD and Algorithms & DS(revise)
