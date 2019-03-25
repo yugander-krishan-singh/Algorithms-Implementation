@@ -1,4 +1,4 @@
-# Algorithms-Implementation
+# Algorithms-Implementations
 Lists all different programming questions implementations
 
 - [Tips for time management](https://www.khanacademy.org/test-prep/sat/new-sat-tips-planning/new-sat-how-to-prep/a/tips-for-managing-your-study-time)
