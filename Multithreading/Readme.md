@@ -1,5 +1,7 @@
 Multithreading related
 
+[Multithreading expert blog](http://www.1024cores.net/)
+
 # Reading Material:
 
 - [Callicoder](https://www.callicoder.com/java-concurrency-issues-and-thread-synchronization/)
