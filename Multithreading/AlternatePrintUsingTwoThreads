@@ -1,0 +1,99 @@
+/**
+  * In this we have two thread- Thread1 and Thread2 which prints even and odd numbers alternatively that is if thread1 prints even
+  * then thread2 prints odd numbers and vice versa.
+  *
+  * We use the wait() and notify() methods to achieve this
+  * 
+  * wait() method immidiately cause the thread to release the lock. When thread gets back the lock it starts executing after the line where it
+  * called wait().
+  * 
+  * notify() wakes up the waiting threads but doesn't immidiately release the lock. It releases only when thread comes out of synchronized block
+  *
+  * The counter variable is declared volatiole as volatile keyword provides both visibility and happen-before guarantee.
+  *
+  * Thread 1 prints the even num and calls notify() so that waiting thread wakes up and start listening for monitor to unlock. And then wait()
+  * is called on Thread 1 so that it goes to waiting state and releases the lock. And since other thread was listening for monitor on object
+  * for unlock it immidiately acquires the lock and prints the odd no and calls notify() to make the other thread to start listening for monitor to unlock
+  * and then calls wait() and releases the lock.
+  *
+  *
+**/
+public class AlternatePrinting {
+
+	private volatile int i = 0;
+
+	public static void main(String[] args) {
+
+		AlternatePrinting ap = new AlternatePrinting();
+
+		Runnable r1 = new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				ap.printEven();
+			}
+		};
+
+		Runnable r2 = new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				ap.printOdd();
+			}
+		};
+
+		Thread t1 = new Thread(r1);
+		t1.setPriority(10);
+
+		Thread t2 = new Thread(r2);
+		t2.setPriority(4);
+
+		t1.start();
+		t2.start();
+	}
+
+	public void printEven() {
+
+		synchronized (this) {
+
+			while (i <= 10) {
+				if (i % 2 == 0) {
+					System.out.println(i++ + " - Printed by " + Thread.currentThread().getName());
+					notify();
+				}
+				else
+					try {
+						wait();
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			}
+
+		}
+
+	}
+
+	public void printOdd() {
+
+		synchronized (this) {
+
+			while (i <= 10) {
+				if (i % 2 != 0) {
+					System.out.println(i++ + " - Printed by " + Thread.currentThread().getName());
+					notify();
+				} else {
+					try {
+						wait();
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+	}
+
+}
