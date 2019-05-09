@@ -16,3 +16,6 @@ Queue:
 
 Implementation
 
+
+Arrays:
+- [Maximum difference between two elements such that larger element appears after the smaller number](https://www.geeksforgeeks.org/maximum-difference-between-two-elements/)
